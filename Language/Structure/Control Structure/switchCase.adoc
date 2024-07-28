@@ -56,6 +56,7 @@ Note that you can also use negative values as input.
 Nothing
 
 --
+
 // OVERVIEW SECTION ENDS
 
 
@@ -82,6 +83,33 @@ switch (var) {
     // default is optional
     break;
 }
+
+----
+
+[float]
+=== Multiple case statements can execute the same code:
+The function supports a range option (for continuous values):
+----
+   case 1...3:
+----
+
+Or 
+----
+switch (test) {
+    case 1:
+      //do thing 1
+      break;
+
+    case 2:
+    case 3:
+    case 13:
+    case 99:
+      //do thing 2
+      break;
+
+    default:
+      break;
+  }
 
 ----
 [%hardbreaks]
